@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 
 function Postapi() {
   const url = "/api/v1/message";
@@ -9,19 +9,30 @@ function Postapi() {
       message: "Test!!!",
     }),
   };
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch(url, options);
-        const data = await response.json();
-        return data;
-      } catch (e) {
-        return e;
-      }
-    };
-    getData();
-  }, []);
-  return;
+
+  const [responseData, setResponseData] = useState({});
+  const [error, setError] = useState({});
+
+  const btnClick = async () => {
+    try {
+      const response = await fetch(url, options);
+      const data = await response.json();
+      setResponseData(data);
+    } catch (e) {
+      setError(e);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={btnClick}>PostAPI</button>
+      {responseData ? (
+        <p>Response: {JSON.stringify(responseData)}</p>
+      ) : (
+        <p>{error}</p>
+      )}
+    </div>
+  );
 }
 
 export default Postapi;
