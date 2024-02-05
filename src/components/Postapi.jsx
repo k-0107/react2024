@@ -26,11 +26,7 @@ function Postapi() {
   return (
     <div>
       <button onClick={btnClick}>PostAPI</button>
-      {responseData ? (
-        <p>Response: {JSON.stringify(responseData)}</p>
-      ) : (
-        <p>{error}</p>
-      )}
+      {responseData ? <p>{JSON.stringify(responseData)}</p> : <p>{error}</p>}
     </div>
   );
 }
