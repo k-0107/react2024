@@ -40,5 +40,4 @@ function Postfile() {
     </div>
   );
 }
-
 export default Postfile;
