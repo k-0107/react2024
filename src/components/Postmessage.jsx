@@ -45,6 +45,3 @@ function Postmessage() {
 }
 
 export default Postmessage;
-// {
-//   responseData ? <p>{JSON.stringify(responseData)}</p> : <p>{error}</p>;
-// }

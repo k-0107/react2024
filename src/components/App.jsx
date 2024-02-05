@@ -2,6 +2,7 @@ import React from "react";
 import Getapi from "./Getapi";
 import Postapi from "./Postapi";
 import Postmessage from "./Postmessage";
+import Postfile from "./Postfile";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Getapi />
       <Postapi />
       <Postmessage />
+      <Postfile />
     </div>
   );
 }
