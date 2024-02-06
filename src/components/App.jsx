@@ -3,6 +3,7 @@ import Getapi from "./Getapi";
 import Postapi from "./Postapi";
 import Postmessage from "./Postmessage";
 import Postfile from "./Postfile";
+import IndexPhotos from "./IndexPhotos";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Postapi />
       <Postmessage />
       <Postfile />
+      <IndexPhotos />
     </div>
   );
 }

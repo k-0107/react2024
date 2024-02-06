@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Getapi() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState(null);
 
   const handleButtonClick = async () => {
     try {
