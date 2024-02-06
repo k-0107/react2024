@@ -34,6 +34,7 @@ function Postmessage() {
         送信
       </button>
       <h1>メッセージ一覧</h1>
+      <p>{JSON.stringify(responseData)}</p>
       <ul>
         {responseData.data &&
           responseData.data.map((item) => (

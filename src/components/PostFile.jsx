@@ -37,6 +37,7 @@ function Postfile() {
       <input type="file" name="image" onChange={handleFileChange} />
       <button onClick={handleUpload}>アップロード</button>
       {responseData ? <p>{JSON.stringify(responseData)}</p> : <p>{error}</p>}
+      <img src={responseData.imageUrl} />
     </div>
   );
 }
