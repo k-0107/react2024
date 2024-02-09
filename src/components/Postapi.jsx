@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import SendTimeExtensionIcon from "@mui/icons-material/SendTimeExtension";
 
 function Postapi() {
   const url = "/api/v1/message";
@@ -25,7 +27,15 @@ function Postapi() {
 
   return (
     <div>
-      <button onClick={btnClick}>PostAPI</button>
+      <Button
+        startIcon={<SendTimeExtensionIcon />}
+        variant="contained"
+        color="success"
+        onClick={btnClick}
+        sx={{ mt: 2 }}
+      >
+        PostAPI
+      </Button>
       {responseData ? <p>{JSON.stringify(responseData)}</p> : <p>{error}</p>}
     </div>
   );

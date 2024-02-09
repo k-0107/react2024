@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 function Postfile() {
   const [selectedFile, setSelectedFile] = useState({});
@@ -34,8 +36,30 @@ function Postfile() {
 
   return (
     <div>
-      <input type="file" name="image" onChange={handleFileChange} />
-      <button onClick={handleUpload}>アップロード</button>
+      <input
+        type="file"
+        id="file-upload"
+        name="image"
+        style={{ display: "none" }}
+        onChange={handleFileChange}
+      />
+      <label htmlFor="file-upload">
+        <Button
+          component="span"
+          variant="contained"
+          startIcon={<CloudUploadIcon />}
+        >
+          Upload file
+        </Button>
+      </label>
+      <Button
+        variant="outlined"
+        type="button"
+        onClick={handleUpload}
+        sx={{ ml: 2 }}
+      >
+        アップロード
+      </Button>
       {responseData ? <p>{JSON.stringify(responseData)}</p> : <p>{error}</p>}
       <img src={responseData.imageUrl} />
     </div>

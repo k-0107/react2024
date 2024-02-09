@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 
 function Getapi() {
   const [data, setData] = useState(null);
@@ -15,7 +17,14 @@ function Getapi() {
 
   return (
     <div>
-      <button onClick={handleButtonClick}>API取得</button>
+      <Button
+        variant="contained"
+        endIcon={<SendIcon />}
+        onClick={handleButtonClick}
+        sx={{ mt: 2 }}
+      >
+        API取得
+      </Button>
       {data && (
         <div>
           <h2>API Response:</h2>
