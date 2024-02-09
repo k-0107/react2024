@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import SendTimeExtensionIcon from "@mui/icons-material/SendTimeExtension";
 
 function Postapi() {
-  const url = "/api/v1/message";
+  const url = "/api/v1/Testmessage";
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },

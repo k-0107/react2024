@@ -60,7 +60,7 @@ function Postmessage() {
         </Button>
       </Box>
       <h1>メッセージ一覧</h1>
-      <p>{JSON.stringify(responseData)}</p>
+      <p>{JSON.stringify(responseData.result)}</p>
       <ul>
         {responseData.data &&
           responseData.data.map((item) => (
